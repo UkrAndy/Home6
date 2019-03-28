@@ -55,20 +55,22 @@ let arr2 = [10, 20, 30, 40]
 document.write(`<br />${replaceZero(arr2)}`)
 // Шосте завдання
 function table(a, b) {
-    document.write(`<table border>`)
+    let tbl = `<table border>`
     for (let i = 0; i < a; i++) {
-        document.write(`<tr>`)
+        tbl += `<tr>`
         for (let j = 0; j < b; j++) {
-            document.write(`<td>${i + 1} ${j + 1}</td>`)
+            tbl += `<td>${i + 1} ${j + 1}</td>`
         }
-        document.write(`</tr>`)
+        tbl += `</tr>`
     }
-    document.write(`</tabele>`)
+    tbl += `</table>`
+    return tbl
 }
-table(5, 8)
+document.write(`<br/> ${table(5, 8)}`)
 //Сьоме завдання
 function imageRandom(arr) {
-    document.write(`<br /><img src="${arr[Math.floor(Math.random() * arr.length)]} " alt="Картинка">`)
+    let x = `<img src="${arr[Math.floor(Math.random() * arr.length)]} " alt="Картинка">`
+    return x
 }
 let imgs = ['https://img2.dp.ru/images/article/2017/10/13/20db6bcd-6fe4-400d-b3f2-cce26b27deb4.jpg', 'https://www.e1.ru/news/images/resize_900/new1/479/012/images/0.jpg', 'https://cdn.vdmsti.ru/image/2018/9x/wcz9w/default-15xu.jpg']
-imageRandom(imgs)
+document.write(`<br />${imageRandom(imgs)}`)
