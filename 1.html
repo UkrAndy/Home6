@@ -8,9 +8,18 @@
     <title>Document</title>
     <script>
         function sum(a, b) {
-            return document.write(`сума - ${a + b}`)
+            return document.write(`сума - ${a + b}`)    <-- Не виводьте у функції!!!
         }
         sum(3, 5)
+Треба так:
+            
+        function sum(a, b) {
+            return a+b   <-- Функція повинна повертати результат
+        }
+        document.write(`сума - ${sum(3, 5)}`) 
+        
+
+    
     </script>
 </head>
 
